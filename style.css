@@ -89,11 +89,16 @@ nav{
   cursor: pointer;
 }
 
+#addPhotoInput{
+  display: none;
+}
+
 .add-photo{
   transform: scale(3);
   position: fixed;
   bottom: 5em;
   right: 7em;
+  cursor: pointer;
 }
 
 .gallery-nav{
