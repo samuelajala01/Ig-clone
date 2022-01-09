@@ -4,13 +4,15 @@ import Nav from './modules/Nav.js'
 
 const App = () =>{
   return `
-  Nav()
-  Bio()
-  Gallery()
+  ${Nav()}
+  <div class="container">
+  ${Bio()}
+  ${Gallery()}
+  </div>
   `
 }
 
-
+document.getElementById('root').innerHTML = App();
 
 
 
