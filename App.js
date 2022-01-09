@@ -6,8 +6,8 @@ const App = () =>{
   return `
   ${Nav()}
   <div class="container">
-  ${Bio()}
-  ${Gallery()}
+    ${Bio()}
+    ${Gallery()}
   </div>
   `
 }
