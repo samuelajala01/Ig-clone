@@ -7,3 +7,5 @@
   </div>
   </section>
 `;
+
+export default Bio;

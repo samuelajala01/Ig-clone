@@ -21,3 +21,5 @@ const Gallery = () => `
     </a>
   </section>
 `
+
+export default Gallery;

@@ -12,3 +12,5 @@ const Nav = () =>`
     </span>
   </nav>
 `
+
+export default Nav;
