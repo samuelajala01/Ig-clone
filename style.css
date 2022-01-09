@@ -89,6 +89,13 @@ nav{
   cursor: pointer;
 }
 
+.add-photo{
+  transform: scale(3);
+  position: fixed;
+  bottom: 5em;
+  right: 7em;
+}
+
 .gallery-nav{
   height: 3.5em;
 }

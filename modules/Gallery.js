@@ -1,5 +1,5 @@
 const Gallery = () => `
-  <i class="fa fas-plus-square"></i>
+  <i class="add-photo fas fa-plus-square">A</i>
   <div class="gallery-nav"></div>
   <section class="gallery">
     <a href="#" class="item">
