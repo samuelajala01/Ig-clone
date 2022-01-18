@@ -1,6 +1,6 @@
-import Bio from './modules/Bio.js'
-import Gallery from './modules/Gallery.js'
-import Nav from './modules/Nav.js'
+import Bio from './modules/bio/Bio.js'
+import Gallery from './modules/gallery/Gallery.js'
+import Nav from './modules/nav/Nav.js'
 
 const App = () =>{
   return `
