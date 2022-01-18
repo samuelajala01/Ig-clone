@@ -1,10 +1,10 @@
  const Bio = () =>{
- 
+  const name = localStorage.getItem('name');
  return `
   <section class="bio">
   <div class="profile-photo"><img src="./images/kevin-hart.jfif" alt="profile-photo" /></div>
   <div class="profile-info">
-    <p class="name">Samuel Ajala</p>
+    <p class="name">${name}</p>
     <p class="about">Hi, I'm Jane, i used to be indecisive but now I'm not so sure.</p>
     <button>Edit bio</button>
   </div>
