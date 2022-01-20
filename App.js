@@ -2,6 +2,17 @@ import Bio from './modules/bio/Bio.js'
 import Gallery from './modules/gallery/Gallery.js'
 import Nav from './modules/nav/Nav.js'
 
+const rootDiv = document.getElementById('root')
+
+const request = indexedDB.open('instagram', 1)
+request.onsuccess = () => {
+  console.log('Success')
+}
+
+request.onerror = () => {
+  console.log('Error')
+}
+
 const App = () =>{
   return `
   ${Nav()}
@@ -13,7 +24,7 @@ const App = () =>{
 }
 
 
-document.getElementById('root').innerHTML = App();
+rootDiv.innerHTML = App();
 
 const editBioForm = document.querySelector('.edit-bio-form')
 
