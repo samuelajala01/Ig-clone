@@ -1,17 +1,9 @@
 import Bio from './modules/bio/Bio.js'
 import Gallery from './modules/gallery/Gallery.js'
 import Nav from './modules/nav/Nav.js'
+import {request} from './database.js'
 
 const rootDiv = document.getElementById('root')
-
-const request = indexedDB.open('instagram', 1)
-request.onsuccess = () => {
-  console.log('Success')
-}
-
-request.onerror = () => {
-  console.log('Error')
-}
 
 const App = () =>{
   return `
