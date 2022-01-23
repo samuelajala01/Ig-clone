@@ -1,4 +1,4 @@
-import { addEntryToDb } from '../../database.js'
+import EditBioForm from './EditBio.js'
 
 const Bio = () =>{
 
@@ -10,11 +10,7 @@ const Bio = () =>{
     <p class="about">Hi, I'm Jane, i used to be indecisive but now I'm not so sure.</p>
     <button>Edit bio</button>
   </div>
-  <form class="edit-bio-form">
-  <input type="text" id="bioName" placeholder="Name"/>
-  <input type="text" id="bioDescription" placeholder="Name"/>
-  <button id='submit' type="submit">Submit</button> 
-  </form>
+   ${EditBioForm()}
   </section>
 `}
   
