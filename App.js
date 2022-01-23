@@ -1,7 +1,7 @@
 import Bio from './modules/bio/Bio.js'
 import Gallery from './modules/gallery/Gallery.js'
 import Nav from './modules/nav/Nav.js'
-import {request, addEntryToDB} from './database.js'
+import { request } from './database.js'
 
 const rootDiv = document.getElementById('root')
 
@@ -14,7 +14,6 @@ const App = () =>{
   </div>
   `
 }
-
 
 rootDiv.innerHTML = App();
 
