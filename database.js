@@ -4,10 +4,6 @@ request.onsuccess = () => {
   const database= request.result
   console.log('Success creating or accessing database')
   console.log(request)
-
-  const transaction= database.transaction(['bio'], 'readwrite')
-  const store= transaction.objectStore('bio')
-  store.add({name: 'Jane Butters',description: `Hey, I'm Jane!`})
 }
 
 request.onupgradeneeded = () => {
@@ -20,5 +16,33 @@ request.onerror = () => {
   console.log('Error Creating or accessing db')
 }
 
-export { request }
+const addEntryToDb = (storeName, entry) => {
+  const database = request.result
+  const transaction= database.transaction([storeName], 'readwrite')
+  const store= transaction.objectStore([storeName])
+  store.add(entry)
+
+  transaction.oncomplete =() => alert(`Entry added to ${storeName}`)
+  transaction.onerror = (event) => {
+    console.log(`Error adding entry to ${storeName}`)
+    console.log(event.target.error)
+  }
+}
+
+const getEntryFromDb = (storeName, id) => {
+  const database = request.result
+  const transaction = database.transaction([storeName])
+  const store = transaction.objectStore(storeName)
+  const getData = id ?  store.get(id) : store.getAll()
+
+ getData.onsuccess = () =>{
+    console.log('success', getData.result)
+  }
+
+  getData.onerror = () =>{
+    console.log('Error getting data from store')
+  }
+}
+
+export { request, addEntryToDb, getEntryFromDb }
 
