@@ -1,4 +1,4 @@
-
+@import "./modules/bio/bio.css";
 
 body{
   background-color: #FAFAFA;
@@ -51,14 +51,6 @@ nav{
 
 .container{
   padding: 0 15%;
-}
-
-.bio{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  height:13em;
-  padding: 3em 0 0 5em;
-  border-bottom: 0.5px solid #dbdbdb;
 }
 
 .profile-photo{
