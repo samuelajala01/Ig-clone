@@ -1,4 +1,4 @@
-import { addEntryToDb } from '../../database.js'
+import { addEntryToDb, clearAllEntries } from '../../database.js'
 
 const addBioEventListeners = () =>{
   const editBioForm = document.querySelector('.edit-bio-form')
@@ -12,12 +12,15 @@ const addBioEventListeners = () =>{
   editBioForm.addEventListener('submit', (e) =>{
     e.preventDefault();
     const bioName = document.querySelector('#bioName').value
-    const bioDescription = document.querySelectorAll('#bioDescription').value
-    const nameOutput = document.querySelector('.name')
-    console.log({bioName})
-    nameOutput.innerText = bioName
+    const bioDescription = document.querySelector('#bioDescription').value
+    const bioNameOutput = document.querySelector('.name')
+    const bioDescriptionOutput = document.querySelector('.about')
 
+    clearAllEntries('bio')
     addEntryToDb('bio', { bioName, bioDescription })
+    bioNameOutput.innerText = bioName
+    bioDescriptionOutput.innerText = bioDescription
+    editBioForm.style.display = 'none'
   })
 
   cancelFormButton.addEventListener('click', () =>{

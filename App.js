@@ -6,20 +6,23 @@ import { request, addEntryToDb, getEntryFromDb} from './database.js'
 
 const rootDiv = document.getElementById('root')
 
-const App = () =>{
+const App = async () =>{
   return `
   ${Nav()}
   <div class="container">
-    ${Bio()}
+    ${await Bio()}
     ${Gallery()}
   </div>
   `
 }
 
-rootDiv.innerHTML = App();
-
-request.onsuccess = () =>{
+request.onsuccess = async () =>{
+  rootDiv.innerHTML = await App();
   addBioEventListeners()
+}
+
+request.onerror = () => {
+
 }
 
 const photoInput = document.querySelector('#photoInput');

@@ -29,20 +29,33 @@ const addEntryToDb = (storeName, entry) => {
   }
 }
 
-const getEntryFromDb = (storeName, id) => {
-  const database = request.result
-  const transaction = database.transaction([storeName])
-  const store = transaction.objectStore(storeName)
-  const getData = id ?  store.get(id) : store.getAll()
-
- getData.onsuccess = () =>{
-    console.log('success', getData.result)
-  }
-
-  getData.onerror = () =>{
-    console.log('Error getting data from store')
-  }
+const getEntryFromDb = async (storeName, id) => {
+  const data = new Promise((resolve, reject) => {
+    const database = request.result
+    const transaction = database.transaction([storeName])
+    const store = transaction.objectStore(storeName)
+    const getData = id ?  store.get(id) : store.getAll()
+  
+   getData.onsuccess = () =>{
+      console.log('success', getData.result)
+      resolve(getData.result)
+    }
+  
+    getData.onerror = () =>{
+      console.log('Error getting data from store')
+      reject(getData.error)
+    }
+  })
+  return Promise.resolve(data)
 }
 
-export { request, addEntryToDb, getEntryFromDb }
+const clearAllEntries = (storeName) =>{
+  const database = request.result
+  const transaction = database.transaction([storeName], 'readwrite')
+  const store = transaction.objectStore(storeName)
+  store.clear()
+}
+
+
+export { request, addEntryToDb, getEntryFromDb, clearAllEntries }
 
