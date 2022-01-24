@@ -1,29 +1,16 @@
-const Gallery = () => `
-<input type ="file" name="photo" id="addPhotoInput">
-<label for="addPhotoInput">
-  <i class="add-photo fas fa-plus-square">A</i>
-</label>
-  <div class="gallery-nav"></div>
-  <section class="gallery">
-    <a href="#" class="item">
-      <img src="./images/kevin-hart.jfif" alt="">
-    </a>
-    <a href="#" class="item">
-      <img src="./images/kevin-hart.jfif" alt="">
-    </a>
-    <a href="#" class="item">
-      <img src="./images/kevin-hart.jfif" alt="">
-    </a>
-    <a href="#" class="item">
-      <img src="./images/kevin-hart.jfif" alt="">
-    </a>
-    <a href="#" class="item">
-      <img src="./images/kevin-hart.jfif" alt="">
-    </a>
-    <a href="#" class="item">
-      <img src="./images/kevin-hart.jfif" alt="">
-    </a>
-  </section>
-`
+const Gallery = () => {
+  return `
+    <input type ="file" name="photo" id="photoInput">
+    <label for="photoInput">
+      <i class="add-photo fas fa-plus-square">A</i>
+    </label>
+      <div class="gallery-nav"></div>
+      <section class="gallery">
+        <div class="gallery-loader">
+          <img src = '../../assets/galleryLoader.svg'alt="">
+        </div>
+      </section>
+  `
+}
 
 export default Gallery;

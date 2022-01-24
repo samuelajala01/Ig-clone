@@ -37,7 +37,6 @@ const getEntryFromDb = async (storeName, id) => {
     const getData = id ?  store.get(id) : store.getAll()
   
    getData.onsuccess = () =>{
-      console.log('success', getData.result)
       resolve(getData.result)
     }
   

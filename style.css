@@ -1,4 +1,5 @@
 @import "./modules/bio/bio.css";
+@import "./modules/gallery/gallery.css";
 
 body{
   background-color: #FAFAFA;
@@ -81,7 +82,7 @@ nav{
   cursor: pointer;
 }
 
-#addPhotoInput{
+#photoInput{
   display: none;
 }
 
@@ -91,33 +92,6 @@ nav{
   bottom: 5em;
   right: 7em;
   cursor: pointer;
-}
-
-.gallery-nav{
-  height: 3.5em;
-}
-
-.gallery{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 1.5em;
-  margin-bottom: 2em;
-}
-
-.item{
-  height:17.5em;
-  width:17.5em;
-  background: #000;
-}
-
-.item>img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.item>img:hover{
-  opacity: 0.7;
 }
 
 
