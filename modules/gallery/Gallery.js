@@ -2,7 +2,7 @@ const Gallery = () => {
   return `
     <input type ="file" name="photo" id="photoInput">
     <label for="photoInput">
-      <i class="add-photo fas fa-plus-square">A</i>
+      <i class="add-photo fas fa-plus-square"></i>
     </label>
       <div class="gallery-nav"></div>
       <section class="gallery">
@@ -10,7 +10,7 @@ const Gallery = () => {
           <img src = '../../assets/galleryLoader.svg'alt="">
         </div>
       </section>
-  `
-}
+  `;
+};
 
 export default Gallery;
