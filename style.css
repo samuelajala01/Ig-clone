@@ -10,7 +10,7 @@ nav {
   background-color: #fff;
   height: 3.3em;
   line-height: 3.3em;
-  padding: 0 13.5em;
+  text-align: center;
   border-bottom: 0.1px solid #dbdbdb;
 }
 
@@ -24,10 +24,17 @@ nav {
 
 .search {
   background: #fafafa;
-  margin-left: 19em;
   height: 2em;
   width: 15.5em;
+  margin: 0 16vw;
   border: 1px solid #dbdbdb;
+}
+
+@media (max-width: 850px) {
+  .search {
+    margin: 0 8vw;
+    width: 10em;
+  }
 }
 
 .search::placeholder {
@@ -36,7 +43,7 @@ nav {
 }
 
 .nav-links {
-  margin-left: 8em;
+  background-color: blue;
 }
 
 .nav-links > a {

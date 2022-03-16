@@ -27,6 +27,10 @@
   height: 2.5em;
 }
 
+.name {
+  white-space: nowrap;
+}
+
 .edit-bio-form button {
   background: #333333;
   color: #fff;
